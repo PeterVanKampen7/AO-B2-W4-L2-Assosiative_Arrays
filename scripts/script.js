@@ -1,4 +1,4 @@
-window.onload = function(){
+window.onload = function(){	//Wacht tot de hele pagina is geladen voordat het JS script start
 var run = true;
 
 var fris = 0;	//Een set variabelen voor het bijhouden hoeveel er besteld is
