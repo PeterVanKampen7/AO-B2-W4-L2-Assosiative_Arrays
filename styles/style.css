@@ -4,7 +4,122 @@
 	padding: 0;
 }
 
-body
+.gridContainer
 {
-	background-color: red;
+	display: grid;
+	grid-template-columns: auto 25% 10% 15% auto;
+	grid-template-rows: 240px 28px 10% 10% 10% 10% 10%; 
+	grid-row-gap: 15px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 22px;
+}
+
+h1
+{
+	font-family: 'Vampiro One', cursive;
+	font-size: 60px;
+	color: #d96000;
+	margin-left: 15px;
+}
+
+.headerImage
+{
+	grid-row: 1;
+	grid-column-start: 2;
+	grid-column-end: 5;
+	background-image: url("../images/header.jpg");
+	background-size: 100% 100%;
+}
+
+#rekening
+{
+	grid-row: 2;
+	grid-column: 2;
+	font-size: 26px;
+}
+
+#quantity
+{
+	grid-row: 2;
+	grid-column: 3;
+	font-size: 26px;
+}
+
+#prijs
+{
+	grid-row: 2;
+	grid-column: 4;
+	font-size: 26px;
+}
+
+#item1
+{
+	grid-row: 3;
+	grid-column: 2;
+}
+
+#qty1
+{
+	grid-row: 3;
+	grid-column: 3;
+}
+
+#prijs1
+{
+	grid-row: 3;
+	grid-column: 4;
+}
+
+#item2
+{
+	grid-row: 4;
+	grid-column: 2;
+}
+
+#qty2
+{
+	grid-row: 4;
+	grid-column: 3;
+}
+
+#prijs2
+{
+	grid-row: 4;
+	grid-column: 4;
+}
+
+#item3
+{
+	grid-row: 5;
+	grid-column: 2;
+}
+
+#qty3
+{
+	grid-row: 5;
+	grid-column: 3;
+}
+
+#prijs3
+{
+	grid-row: 5;
+	grid-column: 4;
+}
+
+#item4
+{
+	grid-row: 6;
+	grid-column: 2;
+}
+
+#qty4
+{
+	grid-row: 6;
+	grid-column: 3;
+}
+
+#prijs4
+{
+	grid-row: 6;
+	grid-column: 4;
 }
