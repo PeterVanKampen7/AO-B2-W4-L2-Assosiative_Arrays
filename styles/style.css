@@ -22,6 +22,11 @@ h1
 	margin-left: 15px;
 }
 
+p
+{
+	margin-left: 5px;
+}
+
 .headerImage
 {
 	grid-row: 1;
@@ -121,5 +126,23 @@ h1
 #prijs4
 {
 	grid-row: 6;
+	grid-column: 4;
+}
+
+#item5
+{
+	grid-row: 7;
+	grid-column: 2;
+}
+
+#qty5
+{
+	grid-row: 7;
+	grid-column: 3;
+}
+
+#prijs5
+{
+	grid-row: 7;
 	grid-column: 4;
 }
