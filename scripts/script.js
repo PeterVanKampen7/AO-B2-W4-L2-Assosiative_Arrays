@@ -1,9 +1,15 @@
 window.onload = function(){
 var run = true;
-var fris = 0;
+
+var fris = 0;	//Een set variabelen voor het bijhouden hoeveel er besteld is
 var bier = 0;
 var wijn = 0;
 var bitterballen = 0;
+
+var frisPrijs;	//Een set variabelen waar de totaal prijs per product in zal komen
+var bierPrijs;
+var wijnPrijs;
+var bitterbalPrijs;
 
 while(run)
 {
@@ -15,7 +21,7 @@ while(run)
 	}
 	else if(input == "fris" || input == "bier" || input == "wijn")
 	{
-		addOrder(input);
+		addDrink(input);
 	}
 	else if(input == "snack")
 	{
@@ -28,7 +34,7 @@ while(run)
 
 }
 
-function addOrder(order)
+function addDrink(order)	//Een functie die het toevoegen van drankjes afhandeld. De functie vraagt om de hoeveelheid en slaat dat daarna op in een variabele.
 {
 	var amount = Number(prompt("Hoeveel "+order+" wilt u toevoegen aan uw bestelling?"));
 
@@ -44,13 +50,9 @@ function addOrder(order)
 	{
 		wijn+=amount;
 	}
-
-	console.log("fris: "+fris);
-	console.log("bier: "+bier);
-	console.log("wijn: "+wijn);
 }
 
-function addSnacks()
+function addSnacks()	//Een functie die het toevoegen van bitterbalen afhandeld. De functie bepaald hoeveel bitterballen de klant wil en slaat dit op in een variabele
 {
 	var amount = Number(prompt("Hoeveel bitterballen wilt u toevoegen (8 of 16)?"));
 	if(amount == 8 || amount == 16)
@@ -67,16 +69,16 @@ function addSnacks()
 	console.log("bitterballen: "+bitterballen);
 }
 
-function rekening()
+function rekening()	//Een functie die de rekening maakt en op het scherm zet.
 {
-	var frisPrijs = fris * 2.5;
-	var bierPrijs = bier * 1.75;
-	var wijnPrijs = wijn * 4;
-	var bitterbalPrijs = bitterballen * 0.25;
+	frisPrijs = prijzen("fris");	//Doormiddel van de prijzen functie word de totaal prijs per product bepaalt.
+	bierPrijs = prijzen("bier");
+	wijnPrijs = prijzen("wijn");
+	bitterbalPrijs = prijzen("bitterballen"); 
 
-	var writeLine = 1;
+	var writeLine = 1;	//Een variabele om bij te houden op welke regel van het scherm er geprint moet worden
 
-	if(fris != 0)
+	if(fris != 0)	//Als er fris besteld is zet dit op de rekening
 	{
 		document.getElementById("item1").innerHTML = "Fris";
 		document.getElementById("qty1").innerHTML = fris;
@@ -84,7 +86,7 @@ function rekening()
 		writeLine++;
 	}
 
-	if(bier != 0)
+	if(bier != 0)	//Als er bier besteld is zet dit op de rekening op een nog lege lijn
 	{
 		if(writeLine == 1)
 		{
@@ -102,7 +104,7 @@ function rekening()
 		}
 	}
 
-	if(wijn != 0)
+	if(wijn != 0)	//Als er wijn besteld is zet dit op de rekening op een nog lege lijn
 	{
 		if(writeLine == 1)
 		{
@@ -127,7 +129,7 @@ function rekening()
 		}
 	}
 
-	if(bitterballen != 0)
+	if(bitterballen != 0)	//Als er bitterballen besteld zijn zet dit op de rekening op een nog lege lijn
 	{
 		if(writeLine == 1)
 		{
@@ -159,9 +161,9 @@ function rekening()
 		}
 	}
 
-	var totalQty = fris + bier + wijn + bitterballen;
-	var totalPrijs = frisPrijs + bierPrijs + wijnPrijs + bitterbalPrijs;
-
+	var totalQty = fris + bier + wijn + bitterballen;	//De totale hoeveelheid producten
+	var totalPrijs = prijzen("totaal");		//De totaalprijs van de hele bestelling word bepaald doormiddel van een functie
+											//De totaalprijs word op de rekening gezet op een nog lege lijn
 	if(writeLine == 2)
 	{
 		document.getElementById("item2").innerHTML = "Totaal prijs";
@@ -185,6 +187,30 @@ function rekening()
 		document.getElementById("item5").innerHTML = "Totaal prijs";
 		document.getElementById("qty5").innerHTML = totalQty;
 		document.getElementById("prijs5").innerHTML = totalPrijs;
+	}
+}
+
+function prijzen(type)	//Een functie die het totaal en subtotaal van de bestelling uitrekend.
+{
+	if(type == "fris")
+	{
+		return fris * 2.5;
+	}
+	else if(type == "bier")
+	{
+		return bier * 1.75;
+	}
+	else if(type == "wijn")
+	{
+		return wijn * 4;
+	}
+	else if(type == "bitterballen")
+	{
+		return bitterballen * 0.25;
+	}
+	else if(type == "totaal")
+	{
+		return frisPrijs + bierPrijs + wijnPrijs + bitterbalPrijs;
 	}
 }
 }
