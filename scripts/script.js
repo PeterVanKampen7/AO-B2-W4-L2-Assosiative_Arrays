@@ -82,7 +82,7 @@ function rekening()	//Een functie die de rekening maakt en op het scherm zet.
 	{
 		document.getElementById("item1").innerHTML = "Fris";
 		document.getElementById("qty1").innerHTML = fris;
-		document.getElementById("prijs1").innerHTML = frisPrijs;
+		document.getElementById("prijs1").innerHTML = "\u20AC"+frisPrijs;
 		writeLine++;
 	}
 
@@ -92,14 +92,14 @@ function rekening()	//Een functie die de rekening maakt en op het scherm zet.
 		{
 			document.getElementById("item1").innerHTML = "Bier";
 			document.getElementById("qty1").innerHTML = bier;
-			document.getElementById("prijs1").innerHTML = bierPrijs;
+			document.getElementById("prijs1").innerHTML = "\u20AC"+bierPrijs;
 			writeLine++;
 		}
 		else
 		{
 			document.getElementById("item2").innerHTML = "Bier";
 			document.getElementById("qty2").innerHTML = bier;
-			document.getElementById("prijs2").innerHTML = bierPrijs;
+			document.getElementById("prijs2").innerHTML = "\u20AC"+bierPrijs;
 			writeLine++;
 		}
 	}
@@ -110,21 +110,21 @@ function rekening()	//Een functie die de rekening maakt en op het scherm zet.
 		{
 			document.getElementById("item1").innerHTML = "Wijn";
 			document.getElementById("qty1").innerHTML = wijn;
-			document.getElementById("prijs1").innerHTML = wijnPrijs;
+			document.getElementById("prijs1").innerHTML = "\u20AC"+wijnPrijs;
 			writeLine++;
 		}
 		else if(writeLine == 2)
 		{
 			document.getElementById("item2").innerHTML = "Wijn";
 			document.getElementById("qty2").innerHTML = wijn;
-			document.getElementById("prijs2").innerHTML = wijnPrijs;
+			document.getElementById("prijs2").innerHTML = "\u20AC"+wijnPrijs;
 			writeLine++;
 		}
 		else
 		{
 			document.getElementById("item3").innerHTML = "Wijn";
 			document.getElementById("qty3").innerHTML = wijn;
-			document.getElementById("prijs3").innerHTML = wijnPrijs;
+			document.getElementById("prijs3").innerHTML = "\u20AC"+wijnPrijs;
 			writeLine++;
 		}
 	}
@@ -135,28 +135,28 @@ function rekening()	//Een functie die de rekening maakt en op het scherm zet.
 		{
 			document.getElementById("item1").innerHTML = "Bitterballen";
 			document.getElementById("qty1").innerHTML = bitterballen;
-			document.getElementById("prijs1").innerHTML = bitterbalPrijs;
+			document.getElementById("prijs1").innerHTML = "\u20AC"+bitterbalPrijs;
 			writeLine++;
 		}
 		else if(writeLine == 2)
 		{
 			document.getElementById("item2").innerHTML = "Bitterballen";
 			document.getElementById("qty2").innerHTML = bitterballen;
-			document.getElementById("prijs2").innerHTML = bitterbalPrijs;
+			document.getElementById("prijs2").innerHTML = "\u20AC"+bitterbalPrijs;
 			writeLine++;
 		}
 		else if(writeLine == 3)
 		{
 			document.getElementById("item3").innerHTML = "Bitterballen";
 			document.getElementById("qty3").innerHTML = bitterballen;
-			document.getElementById("prijs3").innerHTML = bitterbalPrijs;
+			document.getElementById("prijs3").innerHTML = "\u20AC"+bitterbalPrijs;
 			writeLine++;
 		}
 		else
 		{
 			document.getElementById("item4").innerHTML = "Bitterballen";
 			document.getElementById("qty4").innerHTML = bitterballen;
-			document.getElementById("prijs4").innerHTML = bitterbalPrijs;
+			document.getElementById("prijs4").innerHTML = "\u20AC"+bitterbalPrijs;
 			writeLine++;
 		}
 	}
@@ -168,25 +168,25 @@ function rekening()	//Een functie die de rekening maakt en op het scherm zet.
 	{
 		document.getElementById("item2").innerHTML = "Totaal prijs";
 		document.getElementById("qty2").innerHTML = totalQty;
-		document.getElementById("prijs2").innerHTML = totalPrijs;
+		document.getElementById("prijs2").innerHTML = "\u20AC"+totalPrijs;
 	}
 	else if(writeLine == 3)
 	{
 		document.getElementById("item3").innerHTML = "Totaal prijs";
 		document.getElementById("qty3").innerHTML = totalQty;
-		document.getElementById("prijs3").innerHTML = totalPrijs;
+		document.getElementById("prijs3").innerHTML = "\u20AC"+totalPrijs;
 	}
 	else if(writeLine == 4)
 	{
 		document.getElementById("item4").innerHTML = "Totaal prijs";
 		document.getElementById("qty4").innerHTML = totalQty;
-		document.getElementById("prijs4").innerHTML = totalPrijs;
+		document.getElementById("prijs4").innerHTML = "\u20AC"+totalPrijs;
 	}
 	else
 	{
 		document.getElementById("item5").innerHTML = "Totaal prijs";
 		document.getElementById("qty5").innerHTML = totalQty;
-		document.getElementById("prijs5").innerHTML = totalPrijs;
+		document.getElementById("prijs5").innerHTML = "\u20AC"+totalPrijs;
 	}
 }
 
